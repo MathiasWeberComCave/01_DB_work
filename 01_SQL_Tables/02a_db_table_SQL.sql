@@ -1,8 +1,5 @@
 /* Strukturen */
 
-/* Bildschirm leeren */
-CLEAR;
-
 /* Datenbanken anzeigen */
 #SHOW DATABASES;
 
@@ -16,17 +13,17 @@ DROP DATABASE IF EXISTS first;
 CREATE DATABASE IF NOT EXISTS first;
 
 /* Datenbanken anzeigen */
-#SHOW DATABASES;
+SHOW DATABASES;
 
 /* DB auswählen */
 USE first;
 
-/* Tabelle in gewählter Datenbank anlegen falls nicht vorhanden */
+/* Tabelle und Datenbank in gewählter Datenbank anlegen falls nicht vorhanden */
 CREATE TABLE IF NOT EXISTS test
 (
-    /* Textvaraible mit 20 Zeichen und Ganzahl mit 3 Ziffern anlegen */
-    name VARCHAR(20),
-    age INT(3)
+    /* Textvaraible mit 20 Zeichen und Ganzahl mit 3 Ziffern anlegen die nicht Null sind bzw. Default-Werte beinhalten */
+    name VARCHAR(20) NOT NULL DEFAULT "TBA",
+    age INT(3) NOT NULL DEFAULT 0
 );
 
 /* Tabellen anzeigen */
@@ -46,4 +43,9 @@ INSERT INTO test() VALUES ();
 /* Inhalte der Tabelle anzeigen */
 SELECT * FROM test;
 
+/* Daten doppelt eingeben */
+INSERT INTO test(age,name) VALUES (35,"Alonzo");
+INSERT INTO test(age,name) VALUES (35,"Alonzo");
 
+/* Inhalte der Tabelle anzeigen */
+SELECT * FROM test;
