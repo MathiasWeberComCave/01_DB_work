@@ -28,7 +28,7 @@ DESCRIBE boo.users;
 INSERT INTO
     boo.users (firstName,familyName,userName,userPwd)
 VALUES
-    ("Max","Mütze","max",SHA1(MD5("1234"))),
+    ("Max","Mütze","max",SHA1(MD5("1234"))), /* Passwort wird geschachtelt verschlüsselt */
     ("Maxine","Mütze","maxine",SHA1(MD5("0_1#"))),
     ("Max","Mützerich","maxl",SHA1(MD5("?%y$")));
 
