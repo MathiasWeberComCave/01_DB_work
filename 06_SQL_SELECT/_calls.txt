@@ -1,1 +1,2 @@
 SOURCE 06_SQL_SELECT/06_db_select.sql;
+source 06_SQL_SELECT/06_2_que_basic.sql
