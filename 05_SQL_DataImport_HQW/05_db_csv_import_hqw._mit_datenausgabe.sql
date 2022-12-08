@@ -56,3 +56,61 @@ CREATE TABLE IF NOT EXISTS hqw.data
 
 /* Datenstruktur anzeigen */
 DESCRIBE hqw.data;
+
+# Das Arbeiten mit großen Datenmengen ist hier nur mit Erschwernissen möglich
+
+
+/* Daten laden */
+LOAD DATA LOCAL INFILE "05_SQL_DataImport_HQW/Import/Export.csv"
+INTO TABLE hqw.data
+FIELDS TERMINATED BY ";"
+LINES TERMINATED BY "\n"
+IGNORE 1 ROWS
+ (  Abfragezeitpunkt,
+    AnzahlPAszumArtikel,
+    Arbeitsplatz,
+    ArtGruppe,
+   /* PAFaelligk,
+    AGFlligdat,
+    AGFlligzeit,
+    SollzeitStk,
+    AB,
+    Kundennummer,
+    Kunde,
+    ProdAuftrNr,
+    SAPNr,
+    PAErstelldatum,
+    PAErstellt,
+    Gedruckt,
+    ProdName,
+    ProdMengePlan,
+    ProdMengeGut,
+    Status,
+    Geschlossen,
+    AGZeile,
+    AGNr,
+    AGName,
+    AGDetails,
+    Bemerkung,
+    PABemerkung,
+    AGMengeGepl,
+    GeplanteDauer,
+    AGMengeGut,
+    AGMengeSchlecht,
+    Scrap,
+    ErlProz,
+    Arbeitszeit,
+    Rstzeit,
+    letztesBuchungsdatum,
+    Mengenfehler,
+    AGnichtgemeldet,
+    Doppelmeldung,
+    Ausschussnichtgemeldet,
+    Ausschussliefweiter,*/
+    Fehlerart )
+;
+
+/* Ergebnistabelle anzeigen */
+SELECT * from hqw.data;
+   
+   
