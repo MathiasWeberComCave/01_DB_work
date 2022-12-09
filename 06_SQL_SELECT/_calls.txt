@@ -1,2 +1,9 @@
 SOURCE 06_SQL_SELECT/06_db_select.sql;
 source 06_SQL_SELECT/06_2_que_basic.sql
+SOURCE 06_SQL_SELECT/06_3_que_filter.sql
+SOURCE 06_SQL_SELECT/06_5_que_stringf.sql
+SOURCE 06_SQL_SELECT/06_6a_que_distinct.sql
+SOURCE 06_SQL_SELECT/06_6b_que_count.sql
+SOURCE 06_SQL_SELECT/06_6d_que_avg.sql
+
+
