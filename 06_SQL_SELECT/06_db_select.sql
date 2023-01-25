@@ -3,13 +3,13 @@
 ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
 
 /* Datenbanken löschen falls vorhanden */
-#DROP DATABASE IF EXISTS aktien;
+DROP DATABASE IF EXISTS aktien;
 
 /* Datenbanken anlegen falls nicht vorhanden */
-#CREATE DATABASE IF NOT EXISTS aktien;
+CREATE DATABASE IF NOT EXISTS aktien;
 
 /* Tabelle in gewählter Datenbank anlegen falls nicht vorhanden */
-#CREATE TABLE IF NOT EXISTS aktien.aktien
+CREATE TABLE IF NOT EXISTS aktien.aktien
 (
   
 id INT NOT NULL PRIMARY KEY,        -- ID
@@ -30,7 +30,7 @@ id INT NOT NULL PRIMARY KEY,        -- ID
 DESCRIBE aktien.aktien;
 
 /* Daten laden */
-#'C:/Users/CC-Student/Desktop/370885-Programmierung/Datenbanken/ccc_dez_2019.csv'
+-- 'C:/Users/CC-Student/Desktop/370885-Programmierung/Datenbanken/ccc_dez_2019.csv'
 LOAD DATA LOCAL INFILE "06_SQL_SELECT/Import/ccc_dez_2019.csv"
 INTO TABLE aktien.aktien
 FIELDS TERMINATED BY ";"

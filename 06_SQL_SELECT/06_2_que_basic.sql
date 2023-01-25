@@ -7,7 +7,7 @@ Ausgabe beschränken
 */
 
 -- Abfrage aller Spalten der Tab
-#SELECT * FROM stocks.ccc;
+#SELECT * FROM aktien.aktien;
 
 -- Begrenzung: LIMIT
 -- Abfrage eines Feldes oder einer Feld-Kombi m. Umbenennung (Alias)
