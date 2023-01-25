@@ -15,13 +15,16 @@ Ausgabe beschränken
 -- hier mit Verknüpfung CONCAT() // String-Fkt.
 SELECT
 	ticker AS "SYM",
-	price AS "Kurs in $",
+	price AS "Kurs",
 	c_name AS "Unternehmen",
-	#industry AS "Branche"
+	#industry AS "Branche",
+    #sector AS "Sektor"
 	CONCAT(sector, " | ", industry) AS "Operations"
 FROM aktien.aktien
-LIMIT 10 -- X Zeilen ab 0
-#LIMIT 200,10 
+ORDER BY price ASC , sector DESC
+LIMIT 10 -- ab 0 X Zeilen 
+#LIMIT 200, 10 -- ab 200 X Zeilen 
+
 ;
 
 
